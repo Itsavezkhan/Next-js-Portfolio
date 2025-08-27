@@ -42,17 +42,17 @@ const Projetcs = () => {
   const [selected, setSelected] = useState(projects[0]);
   return (
     <>
-      <div className="w-full h-screen bg-pink-200 flex flex-col">
+      <div id="projects" className="w-full h-screen bg-white flex flex-col">
         {/* Top Section */}
-        <div className="w-full bg-amber-700 md:h-[30%] flex overflow-x-auto md:overflow-hidden gap-4 p-4">
+        <div className="w-full md:h-[30%] flex overflow-x-auto md:overflow-hidden gap-4 p-4">
           {projects.map((project) => (
             <div
               key={project.id}
               onClick={() => setSelected(project)}
-              className={`flex-shrink-0 w-full md:w-1/4 h-40 rounded-xl cursor-pointer border-2 transition-all ${
+              className={`flex-shrink-0 w-full md:w-1/4 h-40 rounded-xl cursor-pointer border-2 transition-all shadow-md ${
                 selected.id === project.id
-                  ? "border-blue-500 scale-105"
-                  : "border-transparent"
+                  ? "border-amber-600 scale-105"
+                  : "border-transparent hover:border-gray-300 hover:scale-105"
               }`}
             >
               <Image
@@ -62,32 +62,39 @@ const Projetcs = () => {
                 height={160}
                 className="w-full h-full object-cover rounded-xl"
               />
-              <p className="text-center font-semibold mt-2">{project.title}</p>
+              <p className="text-center font-semibold mt-2 text-gray-800">
+                {project.title}
+              </p>
             </div>
           ))}
         </div>
 
-        {/* Bottom Section */}
+        {/* Bottom Section (Desktop) */}
         <div className="hidden md:flex w-full h-[70%]">
           {/* Left Video */}
           <div className="w-[70%] p-4">
             <video
               src={selected.video}
               controls
-              className="w-full h-full rounded-xl object-cover"
+              className="w-full h-full rounded-xl object-cover border border-gray-200"
             />
           </div>
           {/* Right Details */}
-          <div className="w-[30%] p-6 flex flex-col justify-center bg-white rounded-l-xl">
-            <h2 className="text-2xl font-bold mb-4">{selected.title}</h2>
-            <p className="text-gray-700">{selected.description}</p>
+          <div className="w-[30%] p-6 flex flex-col justify-center bg-gray-50 rounded-l-xl border border-gray-200 shadow-md">
+            <h2 className="text-2xl font-bold mb-4 text-gray-900">
+              {selected.title}
+            </h2>
+            <p className="text-gray-600">{selected.description}</p>
           </div>
         </div>
 
         {/* Mobile view bottom just scroll */}
         <div className="md:hidden flex-1 overflow-y-auto p-4 space-y-6">
           {projects.map((project) => (
-            <div key={project.id} className="rounded-xl bg-white p-4 shadow-md">
+            <div
+              key={project.id}
+              className="rounded-xl bg-gray-50 p-4 shadow-md border border-gray-200"
+            >
               <Image
                 src={project.thumbnail}
                 alt={project.title}
@@ -95,7 +102,9 @@ const Projetcs = () => {
                 height={200}
                 className="w-full h-48 object-cover rounded-lg"
               />
-              <h2 className="mt-2 text-lg font-bold">{project.title}</h2>
+              <h2 className="mt-2 text-lg font-bold text-gray-900">
+                {project.title}
+              </h2>
               <p className="text-gray-600">{project.description}</p>
             </div>
           ))}

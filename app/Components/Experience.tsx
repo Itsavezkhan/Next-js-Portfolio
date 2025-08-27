@@ -3,33 +3,62 @@ import React from "react";
 const Experience = () => {
   return (
     <>
-      <div className="w-full min-h-screen bg-red-200 flex flex-col md:flex-row">
-        {/* Left Section - Why Me? */}
-        <div className="w-full md:w-1/2 p-6 flex flex-col justify-center bg-gray-500">
-          <h2 className="text-2xl font-bold mb-4">Why Me?</h2>
-          <ul className="list-disc list-inside space-y-2 text-lg">
-            <li>Strong foundation in React & Next.js</li>
-            <li>Good understanding of Redux & state management</li>
-            <li>Experience with Tailwind CSS for modern UI</li>
+      <div
+        id="work-exp"
+        className="w-full min-h-screen flex flex-col md:flex-row items-start justify-center bg-neutral-50 px-6 py-16 gap-12 md:gap-20"
+      >
+        {/* Left Section - Why Me */}
+        <div className="w-full md:w-1/2 flex flex-col justify-center space-y-6 text-center md:text-left">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+            Why <span className="text-teal-600">Me?</span>
+          </h2>
+          <ul className="list-disc list-inside space-y-3 text-gray-600 text-lg max-w-md mx-auto md:mx-0">
+            <li>
+              Strong foundation in{" "}
+              <span className="text-gray-900 font-medium">React</span> &{" "}
+              <span className="text-gray-900 font-medium">Next.js</span>
+            </li>
+            <li>
+              Good understanding of{" "}
+              <span className="text-gray-900 font-medium">Redux</span> & state
+              management
+            </li>
+            <li>
+              Experience with{" "}
+              <span className="text-gray-900 font-medium">Tailwind CSS</span>{" "}
+              for modern UI
+            </li>
             <li>Problem-solving & debugging skills</li>
             <li>Passionate about writing clean, maintainable code</li>
           </ul>
         </div>
 
         {/* Right Section - Work Experience */}
-        <div className="w-full md:w-1/2 p-6 flex flex-col justify-center bg-gray-500">
-          <h2 className="text-2xl font-bold mb-4">Work Experience</h2>
-          <p className="text-lg">
-            <span className="font-semibold">Frontend Developer</span> <br />
-            5TechgLLP, Pune (Remote) <br />
-            <span className="text-sm text-gray-700">June 2024 – June 2025</span>
-          </p>
-          <p className="mt-4">
-            During this role, I worked as a frontend developer building scalable
-            and user-friendly web applications using React, Next.js, Redux, and
-            Tailwind CSS. I collaborated with a remote team to deliver
-            high-quality features and improve performance.
-          </p>
+        <div className="w-full md:w-1/2 flex flex-col justify-center space-y-6 text-center md:text-left">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
+            Work <span className="text-teal-600">Experience</span>
+          </h2>
+
+          <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm space-y-3">
+            <p className="text-lg text-gray-900 font-semibold">
+              Frontend Developer
+            </p>
+            <p className="text-gray-600">
+              5TechgLLP, Pune (Remote) <br />
+              <span className="text-sm text-gray-500">
+                June 2024 – June 2025
+              </span>
+            </p>
+            <p className="text-gray-600 leading-relaxed">
+              Worked on building scalable and user-friendly web applications
+              using <span className="text-gray-900 font-medium">React</span>,{" "}
+              <span className="text-gray-900 font-medium">Next.js</span>,{" "}
+              <span className="text-gray-900 font-medium">Redux</span>, and{" "}
+              <span className="text-gray-900 font-medium">Tailwind CSS</span>.
+              Collaborated with a remote team to deliver high-quality features
+              and improve performance.
+            </p>
+          </div>
         </div>
       </div>
     </>

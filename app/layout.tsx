@@ -27,6 +27,27 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <header className="w-full bg-white border-b border-gray-200 shadow-sm px-6 md:px-20 py-4 flex items-center justify-between sticky top-0 z-50">
+          <h1 className="text-xl font-bold text-gray-900">Avez Khan</h1>
+          <nav className="flex gap-3 flex-wrap">
+            {[
+              { label: "About", href: "#about" },
+              { label: "Projects", href: "#projects" },
+              { label: "Work Exp", href: "#work-exp" },
+              { label: "Work Projects", href: "#work-projects" },
+              { label: "Contact", href: "#contact" },
+            ].map((item, i) => (
+              <a
+                key={i}
+                href={item.href}
+                className="px-4 py-2 rounded-full border border-teal-100 text-teal-600 font-medium bg-white hover:bg-teal-50 transition-all shadow-sm"
+              >
+                {item.label}
+              </a>
+            ))}
+          </nav>
+        </header>
+
         {children}
       </body>
     </html>
