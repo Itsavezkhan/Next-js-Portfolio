@@ -1,5 +1,14 @@
 import React from "react";
 
+const skills = [
+  "React",
+  "Redux Toolkit",
+  "Tailwind CSS",
+  "SQL",
+  "Ant Design",
+  "Formik",
+];
+
 const Experience = () => {
   return (
     <>
@@ -58,6 +67,14 @@ const Experience = () => {
               Collaborated with a remote team to deliver high-quality features
               and improve performance.
             </p>
+            {skills.map((skill) => (
+              <span
+                key={skill}
+                className="text-teal-600 border border-teal-600/60 bg-white px-4 py-2 rounded-full text-sm font-medium hover:border-teal-600 transition"
+              >
+                {skill}
+              </span>
+            ))}
           </div>
         </div>
       </div>

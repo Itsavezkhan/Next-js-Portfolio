@@ -28,7 +28,7 @@ const Main = () => {
           {/* Call to Action Buttons */}
           <div className="mt-6">
             <Link
-              href="/resume.pdf"
+              href="https://drive.google.com/file/d/1OLV3ve05amCaGAZby_5k3IIE5PIk4XOl/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-gray-900 font-medium hover:text-teal-600 transition"
