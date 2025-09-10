@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Inter, Roboto, Poppins } from "next/font/google";
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const roboto = Roboto({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  variable: "--font-roboto",
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,13 +30,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.variable} ${roboto.variable} `}>
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Roboto:wght@400;500;700&family=Poppins:wght@400;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <header className="w-full bg-white border-b border-gray-200 shadow-sm px-6 md:px-20 py-4 flex items-center justify-between sticky top-0 z-50">
-          <h1 className="text-xl font-bold text-gray-900">Avez Khan</h1>
-          <nav className="flex gap-3 flex-wrap">
+          <h1 className="text-xl font-bold text-gray-900 playfair">
+            Avez Khan
+          </h1>
+          <nav className="flex gap-3 flex-wrap font-roboto">
             {[
               { label: "About", href: "#about" },
               { label: "Projects", href: "#projects" },
