@@ -6,28 +6,29 @@ import Image from "next/image";
 const workProjects = [
   {
     id: 1,
-    name: "E-commerce Dashboard",
+    name: "Skymart Retail management system",
     description:
-      "Built an analytics dashboard with React, Redux, and Tailwind for managing sales and inventory.",
-    image: "/project1.png",
+      "Developed a dynamic form system for Skyymart Store with barcode scanning, product registration, edit/update functionality, billing details, and API integration. Enabled seamless product management including add, update, confirm, and form handling workflows.",
+    image: "/SMTOP.png",
     link: "#",
   },
+
   {
     id: 2,
-    name: "Vendor Management System",
+    name: "Real Estate Platform",
     description:
-      "Developed a system for managing vendors, orders, and payments with authentication & role-based access.",
-    image: "/project2.png",
+      "Created a property listing and management website where users can register, sell, and browse properties. Implemented features like property registration, search & filter, user authentication, and secure form handling for smooth transactions.",
+    image: "/SUPERTOP.png",
     link: "#",
   },
-  {
-    id: 3,
-    name: "POS Application",
-    description:
-      "Created a POS app with barcode scanning, order management, and tax calculations for retail stores.",
-    image: "/project3.png",
-    link: "#",
-  },
+  // {
+  //   id: 3,
+  //   name: "POS Application",
+  //   description:
+  //     "Created a POS app with barcode scanning, order management, and tax calculations for retail stores.",
+  //   image: "/project3.png",
+  //   link: "#",
+  // },
 ];
 
 // Animation variants

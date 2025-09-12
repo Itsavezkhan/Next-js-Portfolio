@@ -81,22 +81,22 @@ const Connect = () => {
           {
             icon: <FaTwitter />,
             label: "Twitter",
-            href: "https://twitter.com/",
+            href: "https://x.com/Aveziscoding/",
           },
           {
             icon: <FaLinkedin />,
             label: "LinkedIn",
-            href: "https://linkedin.com/",
+            href: "https://www.linkedin.com/in/avez-khan-code/",
           },
           {
             icon: <FaWhatsapp />,
             label: "WhatsApp",
-            href: "https://wa.me/yourNumber",
+            href: "https://wa.me/8806863508",
           },
           {
             icon: <FaEnvelope />,
             label: "Email",
-            href: "mailto:yourmail@gmail.com",
+            href: "mailto:Avezkhan412@gmail.com",
           },
         ].map((link, i) => (
           <motion.a

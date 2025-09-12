@@ -8,10 +8,10 @@ const About = () => {
   return (
     <div
       id="about"
-      className="w-full min-h-screen flex flex-col md:flex-row items-center justify-center bg-neutral-50 px-6 py-12 gap-12 md:gap-16"
+      className="w-full min-h-auto flex flex-col md:flex-row items-center justify-center bg-yellow-50 px-6 py-12 gap-12 md:gap-16"
     >
       {/* Left Column - Profile Image */}
-      <motion.div
+      {/* <motion.div
         className="w-full md:w-1/2 flex justify-center"
         initial={{ opacity: 0, x: -50 }} // fade from left
         whileInView={{ opacity: 1, x: 0 }}
@@ -25,7 +25,7 @@ const About = () => {
           height={300}
           className="rounded-full object-cover shadow-md border border-gray-200"
         />
-      </motion.div>
+      </motion.div> */}
 
       {/* Right Column - About Text */}
       <motion.div

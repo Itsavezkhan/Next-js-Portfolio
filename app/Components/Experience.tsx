@@ -30,7 +30,7 @@ const Experience = () => {
   return (
     <div
       id="work-exp"
-      className="w-full min-h-screen flex flex-col md:flex-row items-start justify-center bg-neutral-50 px-6 py-16 gap-12 md:gap-20"
+      className="w-full flex flex-col md:flex-row items-start md:items-center justify-start md:justify-center bg-blue-50 px-2 md:px-40 py-16 gap-12 md:gap-20"
     >
       {/* Left Section - Why Me */}
       <motion.div
@@ -43,7 +43,7 @@ const Experience = () => {
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 playfair">
           Why <span className="text-teal-600">Me?</span>
         </h2>
-        <ul className="list-disc list-inside space-y-3 text-gray-600 text-lg max-w-md mx-auto md:mx-0">
+        <ul className="list-disc list-inside space-y-3 text-gray-600 text-sm md:text-lg flex flex-col items-start">
           <li>
             Strong foundation in{" "}
             <span className="text-gray-900 font-medium">React</span> &{" "}
@@ -66,7 +66,7 @@ const Experience = () => {
 
       {/* Right Section - Work Experience */}
       <motion.div
-        className="w-full md:w-1/2 flex flex-col justify-center space-y-6 text-center md:text-left"
+        className="w-full md:w-1/2 flex flex-col justify-center space-y-6 text-center md:text-left relative"
         initial={{ opacity: 0, x: 50 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.3 }}
@@ -76,8 +76,13 @@ const Experience = () => {
           Work <span className="text-teal-600">Experience</span>
         </h2>
 
+        <div className="absolute left-0 top-1/4 h-3/4 w-[3px] bg-teal-500/40 rounded-full overflow-hidden">
+          <span className="absolute top-0 left-0 w-full h-1/3 bg-gradient-to-b from-teal-400 via-teal-200 to-transparent animate-glow" />
+        </div>
+
+        {/* Experience item */}
         <motion.div
-          className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm space-y-3"
+          className="pl-8 space-y-3 relative"
           variants={container}
           initial="hidden"
           whileInView="show"
@@ -93,15 +98,23 @@ const Experience = () => {
             5TechgLLP, Pune (Remote) <br />
             <span className="text-sm text-gray-500">June 2024 – June 2025</span>
           </motion.p>
-          <motion.p className="text-gray-600 leading-relaxed" variants={item}>
-            Worked on building scalable and user-friendly web applications using{" "}
-            <span className="text-gray-900 font-medium">React</span>,{" "}
-            <span className="text-gray-900 font-medium">Next.js</span>,{" "}
-            <span className="text-gray-900 font-medium">Redux</span>, and{" "}
-            <span className="text-gray-900 font-medium">Tailwind CSS</span>.
-            Collaborated with a remote team to deliver high-quality features and
-            improve performance.
-          </motion.p>
+          <motion.ul
+            className="text-gray-600 text-sm md:text-lg leading-relaxed list-disc pl-4 space-y-1"
+            variants={item}
+          >
+            <li>
+              Designed and implemented dynamic forms with validation and
+              conditional rendering
+            </li>
+            <li>
+              Reduced page load time from 1.9s to 1.2s through optimization
+            </li>
+            <li>
+              Integrated APIs and managed state with Redux (70% fewer calls)
+            </li>
+            <li>Optimized CRUD edit functionality for better UX</li>
+            <li>Fixed cross-browser/platform issues</li>
+          </motion.ul>
 
           <motion.div
             className="flex flex-wrap gap-2 pt-2"

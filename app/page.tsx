@@ -9,9 +9,15 @@ import Experience from "./Components/Experience";
 import Projetcs from "./Components/Projetcs";
 import WorkProjects from "./Components/WorkProjects";
 import Connect from "./Components/Connect";
+import Header from "./Components/Header";
 
 export default function Home() {
   const [showIntro, setShowIntro] = useState(true);
+  // const [show, setShow] = useState(false);
+
+  // const showMenu = () => {
+  //   setShow((prev) => !prev);
+  // };
 
   return (
     <>
@@ -22,7 +28,9 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
+          className="w-full overflow-hidden"
         >
+          <Header />
           <Main />
           <About />
           <Experience />

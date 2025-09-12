@@ -22,6 +22,19 @@
   font-family: "Roboto", sans-serif;
 }
 
+@keyframes glow {
+  0% {
+    top: 0%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+.animate-glow {
+  animation: glow 3s linear infinite;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

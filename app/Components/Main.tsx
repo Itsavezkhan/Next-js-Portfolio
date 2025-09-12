@@ -24,7 +24,7 @@ const item = {
 const Main = () => {
   return (
     <motion.div
-      className="relative w-full min-h-screen flex items-center justify-center bg-neutral-50 text-center px-6"
+      className="relative w-full py-28 flex items-center justify-center bg-red-50 text-center px-6"
       variants={container}
       initial="hidden"
       animate="show"
