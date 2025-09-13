@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { FaTwitter, FaLinkedin, FaWhatsapp, FaEnvelope } from "react-icons/fa";
 
@@ -54,19 +55,34 @@ const Connect = () => {
 
       {/* Testimonial */}
       <motion.div
-        className="bg-white p-6 rounded-2xl shadow-md flex flex-col items-center text-center border border-gray-200"
-        initial={{ opacity: 0, scale: 0.9 }}
-        whileInView={{ opacity: 1, scale: 1 }}
+        className="p-6 rounded-2xl flex flex-col items-center text-center"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true }}
       >
-        <img
-          src={testimonials[0].image}
-          alt={testimonials[0].name}
-          className="w-20 h-20 rounded-full object-cover mb-4 border-2 border-teal-500"
-        />
-        <h3 className="text-lg font-semibold">{testimonials[0].name}</h3>
-        <p className="text-gray-600 mt-3">{testimonials[0].text}</p>
+        {/* Avatar with gradient glow */}
+        <div className="relative">
+          <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-teal-500 to-purple-500 blur-md opacity-40"></div>
+          <img
+            src={testimonials[0].image}
+            alt={testimonials[0].name}
+            className="relative w-20 h-20 rounded-full object-cover shadow-md"
+          />
+        </div>
+
+        {/* Name */}
+        <h3 className="text-lg font-semibold mt-4 text-gray-900">
+          {testimonials[0].name}
+        </h3>
+
+        {/* Divider */}
+        <div className="w-12 h-[2px] bg-gradient-to-r from-teal-500 to-purple-500 rounded-full my-3"></div>
+
+        {/* Text */}
+        <p className="text-gray-600 leading-relaxed italic">
+          “{testimonials[0].text}”
+        </p>
       </motion.div>
 
       {/* Contact Links */}
@@ -99,19 +115,28 @@ const Connect = () => {
             href: "mailto:Avezkhan412@gmail.com",
           },
         ].map((link, i) => (
-          <motion.a
+          <motion.div
             key={i}
             variants={itemVariants}
-            href={link.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.1 }}
+            whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="flex items-center gap-2 bg-white hover:bg-teal-50 text-teal-600 font-medium border border-teal-100 px-4 py-2 rounded-full shadow-sm transition-all"
           >
-            {link.icon}
-            <span>{link.label}</span>
-          </motion.a>
+            <Link
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+    w-12 h-12 flex items-center justify-center 
+    rounded-full 
+    bg-teal-50 text-gray-600 
+    shadow-md 
+    transition-all duration-300 
+    hover:bg-gray-600 hover:text-white
+  "
+            >
+              <span className="text-xl">{link.icon}</span>
+            </Link>
+          </motion.div>
         ))}
       </motion.div>
     </section>

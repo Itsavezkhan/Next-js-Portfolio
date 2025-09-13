@@ -99,7 +99,7 @@ const Experience = () => {
             <span className="text-sm text-gray-500">June 2024 – June 2025</span>
           </motion.p>
           <motion.ul
-            className="text-gray-600 text-sm md:text-lg leading-relaxed list-disc pl-4 space-y-1"
+            className="text-gray-600 text-sm md:text-lg leading-relaxed list-disc pl-4 space-y-1 text-left "
             variants={item}
           >
             <li>
