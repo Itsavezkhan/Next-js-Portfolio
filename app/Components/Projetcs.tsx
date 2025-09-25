@@ -1,6 +1,10 @@
 "use client";
 import React, { useState } from "react";
+import Link from "next/link";
 import Image from "next/image";
+import { ExternalLink } from "lucide-react";
+// import { GitHub } from "lucide-react";
+
 import { motion, AnimatePresence } from "framer-motion";
 
 const projects = [
@@ -8,6 +12,7 @@ const projects = [
     id: 1,
     title: "Social Media App",
     thumbnail: "/PP3.png",
+    link: "https://my-connexa.netlify.app/login",
     video: "/SMAFORPP.mp4",
     highlights: [
       {
@@ -36,6 +41,7 @@ const projects = [
     id: 2,
     title: "E-commerce App",
     thumbnail: "/PP2.png",
+    link: "https://we-shopp.netlify.app/",
     video: "/ECAFORPP.mp4",
     highlights: [
       {
@@ -62,6 +68,7 @@ const projects = [
     id: 3,
     title: "Video Streaming App",
     thumbnail: "/PP1.png",
+    link: "https://mycinefy.netlify.app/",
     video: "/VSAFORPP.mp4",
     highlights: [
       {
@@ -124,9 +131,15 @@ const Projetcs = () => {
 
             {/* Details */}
             <div className="p-5 flex flex-col space-y-4">
-              <h2 className="text-lg font-semibold text-gray-900">
-                {project.title}
-              </h2>
+              <div>
+                <h2 className="text-lg font-semibold text-gray-900">
+                  {project.title}
+                </h2>
+                <Link href={project.link}>
+                  <ExternalLink />
+                  {/* <GitHub /> */}
+                </Link>
+              </div>
 
               {/* Highlights */}
               {project.highlights && (
@@ -226,9 +239,14 @@ const Projetcs = () => {
 
             {/* Details */}
             <div className="p-6 flex flex-col space-y-6">
-              <h2 className="text-xl font-bold text-gray-900">
-                {project.title}
-              </h2>
+              <div className="flex gap-3">
+                <h2 className="text-lg font-semibold text-gray-900">
+                  {project.title}
+                </h2>
+                <Link href={project.link} className="w-3">
+                  <ExternalLink />
+                </Link>
+              </div>
 
               {/* Highlights */}
               {project.highlights && (
